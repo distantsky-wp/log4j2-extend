@@ -12,4 +12,8 @@ package org.wp.log.extend;
  * @modify:
  */
 public class Tests {
+
+    public static void main(String[] args) {
+    }
+
 }
