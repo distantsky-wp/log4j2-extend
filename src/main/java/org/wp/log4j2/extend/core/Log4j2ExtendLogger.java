@@ -5,6 +5,8 @@ package org.wp.log4j2.extend.core;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Marker;
+import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
 import org.apache.logging.log4j.message.EntryMessage;
 import org.apache.logging.log4j.message.Message;
 import org.apache.logging.log4j.message.MessageFactory;
@@ -20,7 +22,11 @@ import org.apache.logging.log4j.util.Supplier;
  * @date 2024/5/2
  * @modify
  */
-public class Log4j2Logger implements ExtendedLogger {
+public class Log4j2ExtendLogger extends Logger implements ExtendedLogger {
+
+    public Log4j2ExtendLogger(LoggerContext ctx, String name, MessageFactory messageFactory) {
+        super(ctx, name, messageFactory);
+    }
 
     @Override
     public boolean isEnabled(Level level, Marker marker, Message message, Throwable t) {

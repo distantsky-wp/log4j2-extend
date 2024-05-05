@@ -19,6 +19,9 @@ public class Log4j2ExtendContextFactory extends Log4jContextFactory {
     private static final StatusLogger logger = StatusLogger.getLogger();
 
     public Log4j2ExtendContextFactory() {
+        super();
     }
+
+
 
 }
